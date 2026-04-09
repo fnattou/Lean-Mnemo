@@ -1,0 +1,32 @@
+# .aicontext memory format
+format: YAML + DSL (dir/file/dict entries)
+
+structure:
+  memory/:
+    dict.aicontext: abbrev dict (load first, optional)
+    index.aicontext: root index
+    "{category}/":
+      index.aicontext: category index
+      "{topic}.aicontext": one topic per file
+
+formats:
+  topic: |
+    YYYY-MM-DD: <title>
+      - bullet
+  root_index: |
+    dir: {path}/ | {desc}
+    dict: dict.aicontext | {desc}
+  category_index: |
+    file: {name}.aicontext | {desc}
+    dir: {path}/ | {desc}
+  dict: "ABBR: multi-token phrase (3+ tokens, 3+ uses only)"
+
+rules:
+  - Update date on revisit; no duplicates
+  - Latest state only; no history
+  - Load dict.aicontext first when reading
+  - Update all affected indices on write
+
+bootstrap:
+  - Create memory/index.aicontext + memory/{category}/index.aicontext
+  - /saveMemory creates topic files automatically

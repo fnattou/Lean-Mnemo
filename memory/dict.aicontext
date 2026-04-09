@@ -1,0 +1,8 @@
+# Abbreviation Dictionary for Memory System
+# Format: ABBR: Full Term (description)
+# Only include multi-token terms used frequently
+
+# Example entries (uncomment and add as needed):
+# SMS: session management strategy
+# DTL: database transaction logging
+# SSOT: single source of truth

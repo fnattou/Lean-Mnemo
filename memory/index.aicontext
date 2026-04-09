@@ -1,0 +1,8 @@
+# Memory Index - Root directory overview
+
+dir: decisions/ | Architecture and design decisions
+dir: tasks/ | Ongoing tasks and action items
+dir: bugs/ | Known issues and workarounds
+
+# Dictionary reference
+dict: dict.aicontext | Multi-token abbreviations (load first)

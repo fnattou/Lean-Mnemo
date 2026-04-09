@@ -1,0 +1,7 @@
+# decisions/ - Architecture, design, and strategic decisions
+
+dir: architecture/ | System architecture decisions
+dir: infra/ | Infrastructure and deployment decisions
+
+# Direct children
+# file: <filename> | <description>
